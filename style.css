@@ -1,0 +1,180 @@
+/* General styles for the body with background image */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('ram.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container for the entire to-do app */
+.todo-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title styling */
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Input field for adding tasks */
+.todo-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.todo-input:focus {
+  border-color: #28a745;
+}
+
+/* Button for adding tasks */
+.todo-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-button:hover {
+  background-color: #218838;
+}
+
+/* List of to-do items */
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.todo-item {
+  background-color: #120572cc;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+ 
+}
+
+.todo-item:hover {
+  background-color: #55d2c4;
+  transform: translateY(-3px);
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  background-color: #d4edda;
+  color: #6c757d;
+}
+
+.todo-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.complete-btn {
+  color: #28a745;
+}
+
+.complete-btn:hover {
+  color: #218838;
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  color: #dc3545;
+}
+
+.delete-btn:hover {
+  color: #c82333;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Calendar Dropdown Styles */
+.calendar-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.calendar-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.calendar-btn:hover {
+  background-color: #0056b3;
+}
+
+.calendar-menu {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  z-index: 1;
+  width: 120%;
+  margin-top: 10px;
+}
+
+.calendar-menu input {
+  width: 80%;
+  
+}
+
+.date-picker {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.show {
+  display: block;
+}

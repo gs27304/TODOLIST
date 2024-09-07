@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="todo-container">
+    <h2>To-Do List</h2>
+
+    <!-- Calendar Dropdown -->
+    <div class="calendar-dropdown">
+      <button id="calendar-button" class="calendar-btn">Select Date &#9660;</button>
+      <div id="calendar-menu" class="calendar-menu">
+        <input type="date" id="date-picker" class="date-picker" />
+      </div>
+    </div>
+
+    <input type="text" id="todo-input" class="todo-input" placeholder="Add a task...">
+    <button class="todo-button" id="add-todo">Add Task</button>
+    
+    <ul id="todo-list" class="todo-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
